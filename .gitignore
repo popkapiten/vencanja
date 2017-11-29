@@ -1,0 +1,16 @@
+# ignore system files
+.DS_Store
+.idea
+
+# ignore node.js files
+npm-debug.log
+node_modules/
+
+#ignore build files
+dist/
+
+# ignore minified files
+style.min.css
+scripts.min.js
+
+package-lock.json
