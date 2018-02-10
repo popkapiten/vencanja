@@ -1,0 +1,37 @@
+header {
+  background-color: $primary-color;
+
+  .top-bar {
+    height: 45px;
+
+    > .row--flex {
+      height: 100%;
+    }
+
+    &__left {
+      display: flex;
+      width: 300px;
+      justify-content: space-between;
+      margin: 0;
+
+      &--text {
+        display: flex;
+        align-items: center;
+
+        span {
+          margin-left: 5px;
+        }
+
+        > a {
+          color: lighten($text-color, 20%);
+          transition: all 0.5s ease;
+
+          &:hover {
+            color: $text-color;
+            transition: all 0.5s ease;
+          }
+        }
+      }
+    }
+  }
+}
