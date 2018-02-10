@@ -29,11 +29,26 @@ header {
           color: lighten($text-color, 20%);
           transition: all 0.5s ease;
 
+
           &:hover {
             color: $text-color;
             transition: all 0.5s ease;
+
+            i {
+
+              transition: all 0.5s ease;
+              color: $secondary-color;
+
+              &:last-child {
+                color: inherit;
+              }
+            }
           }
         }
+      }
+
+      @include responsive(null, md) {
+        width: 100%;
       }
     }
 
@@ -43,11 +58,12 @@ header {
       width: 500px;
 
       span {
-        margin: 0 15px;
+        margin: 0 10px;
       }
 
       &--text {
         @extend .top-bar__left--text;
+        position: relative;
 
         &:first-child {
           > a {
@@ -58,6 +74,106 @@ header {
         > a {
           border-left: 1px solid $secondary-color;
           padding-left: 20px;
+        }
+
+        &:hover {
+          .top-bar__right--dropdown {
+            top: 100%;
+            visibility: visible;
+            opacity: 1;
+            transition: all 0.3s ease;
+          }
+        }
+      }
+
+      &--dropdown {
+        position: absolute;
+        top: 120%;
+        right: 0;
+        width: 150%;
+        padding-top: 15px;
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.3s ease;
+
+        ul {
+          display: flex;
+          flex-direction: column;
+          padding: 20px;
+          background-color: #fff;
+          border: 1px solid $secondary-color;
+
+          li {
+            padding: 10px 0;
+            border-bottom: 1px solid rgba($secondary-color, .1);
+
+            &:first-child {
+              padding-top: 0;
+            }
+
+            &:last-child {
+              padding-bottom: 0;
+              border-bottom: none;
+              font-style: italic;
+
+              a {
+                color: $secondary-color;
+              }
+            }
+
+            a {
+              font-size: 1.1em;
+              transition: all 0.5s ease;
+
+              &:hover {
+                color: $secondary-color;
+              }
+            }
+          }
+          &:after {
+            content: '';
+            position: absolute;
+            top: 1px;
+            right: 15px;
+            width: 0;
+            height: 0;
+            border-left: 15px solid transparent;
+            border-right: 15px solid transparent;
+            border-bottom: 15px solid #fff;
+          }
+
+          &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 15px;
+            width: 0;
+            height: 0;
+            border-left: 15px solid transparent;
+            border-right: 15px solid transparent;
+            border-bottom: 15px solid $secondary-color;
+          }
+        }
+      }
+
+      @include responsive(null, md) {
+        width: 100%;
+
+        &--text {
+          > a {
+            border-left: none;
+            padding: 0;
+          }
+        }
+      }
+
+      @include responsive(null, sm) {
+        &--text {
+          a {
+            i:first-child {
+              display: none;
+            }
+          }
         }
       }
     }

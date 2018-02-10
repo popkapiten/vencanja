@@ -104,6 +104,7 @@ $gutter: 20px;
   .row--flex & {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
   }
 }
 
