@@ -9,6 +9,9 @@ node_modules/
 #ignore build files
 dist/
 
+#ignore css files
+app/css/**/*.css
+
 # ignore minified files
 style.min.css
 scripts.min.js
