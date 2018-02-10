@@ -1,0 +1,128 @@
+/* global styling
+--------------------*/
+* {
+  box-sizing: border-box;
+  outline: 0;
+}
+
+/* variables
+---------------------*/
+
+// container
+$container: 1140px;
+
+// grid columns
+$grid-columns: 12;
+
+// breakpoints
+$breakpoint: (
+        sm: 768px,
+        md: 991px,
+        lg: 1190px
+);
+
+// grid spacing
+$gutter: 20px;
+
+/* mixins
+---------------------*/
+
+// clearfix
+@mixin clearfix() {
+  &::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+// responsive
+@mixin responsive($from: null, $to: null) {
+  @if ($from) and ($to) {
+    $breakpoint-from: map-get($breakpoint, $from);
+    $breakpoint-to: map-get($breakpoint, $to) - 1px;
+    @media all and (min-width: $breakpoint-from) and (max-width: $breakpoint-to) {
+      @content;
+    }
+  }
+
+  @else if ($from) {
+    $breakpoint-from: map-get($breakpoint, $from);
+    @media all and (min-width: $breakpoint-from) {
+      @content;
+    }
+  }
+
+  @else if ($to) {
+    $breakpoint-to: map-get($breakpoint, $to);
+    @media all and (max-width: $breakpoint-to) {
+      @content;
+    }
+  }
+}
+
+// column style
+@mixin col-style($size, $cols) {
+  .col-#{$size}-#{$cols} {
+    width: (100% / $grid-columns * $cols);
+  }
+
+  .col-#{$size}-offset-#{$cols} {
+    margin-left: (100% / $grid-columns * $cols);
+  }
+}
+
+/* GRID SYSTEM
+---------------------*/
+
+// containers
+.container {
+  @include clearfix();
+  margin: 0 auto;
+  padding: 0 $gutter;
+  max-width: $container;
+}
+
+.container-fluid {
+  @include clearfix();
+  margin: 0 auto;
+  padding: 0 $gutter;
+  width: 100%;
+}
+
+// rows
+.row {
+  @include clearfix();
+  margin: 0 (-$gutter);
+
+  &--flex {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 (-$gutter);
+  }
+}
+
+// columns
+[class^="col-"] {
+  padding: 0 ($gutter);
+  float: left;
+  width: 100%;
+
+  .row--flex & {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+// breakpoints
+@for $i from 1 through $grid-columns {
+  @include col-style(xs, $i);
+}
+
+@each $name, $width in $breakpoint {
+  @include responsive($name) {
+    @for $i from 1 through $grid-columns {
+      @include col-style($name, $i);
+    }
+  }
+}
