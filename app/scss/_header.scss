@@ -3,9 +3,11 @@ header {
 
   .top-bar {
     height: 45px;
-
     > .row--flex {
       height: 100%;
+      >  [class^="col-"] {
+        justify-content: space-between;
+      }
     }
 
     &__left {
@@ -13,6 +15,7 @@ header {
       width: 300px;
       justify-content: space-between;
       margin: 0;
+      padding: 0;
 
       &--text {
         display: flex;
@@ -30,6 +33,31 @@ header {
             color: $text-color;
             transition: all 0.5s ease;
           }
+        }
+      }
+    }
+
+
+    &__right {
+      @extend .top-bar__left;
+      width: 500px;
+
+      span {
+        margin: 0 15px;
+      }
+
+      &--text {
+        @extend .top-bar__left--text;
+
+        &:first-child {
+          > a {
+            border-left: none;
+          }
+        }
+
+        > a {
+          border-left: 1px solid $secondary-color;
+          padding-left: 20px;
         }
       }
     }
