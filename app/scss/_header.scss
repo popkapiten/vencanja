@@ -95,6 +95,7 @@ header {
         visibility: hidden;
         opacity: 0;
         transition: all 0.3s ease;
+        z-index: 999;
 
         ul {
           display: flex;
@@ -175,6 +176,141 @@ header {
             }
           }
         }
+      }
+    }
+  }
+
+  .navigation {
+    background-color: #fff;
+    height: 100px;
+
+    > .container, .row--flex {
+      height: 100%;
+    }
+
+    &__logo-wrapper {
+      align-items: center;
+
+      &--image {
+        width: 245px;
+        height: 62px;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+
+    &__navbar {
+      display: flex;
+      align-items: center;
+      width: 100%;
+
+      &--menu {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        justify-content: flex-end;
+
+        > li {
+          padding-left: 25px;
+          text-transform: uppercase;
+          text-align: center;
+          margin-bottom: 15px;
+
+          > a {
+            position: relative;
+            font-size: 1.2em;
+
+            &:hover {
+              i {
+                display: inline-block;
+
+                @include responsive(null,md) {
+                  display: none;
+                }
+              }
+            }
+
+            i {
+              display: none;
+              width: 100%;
+              text-align: center;
+              position: absolute;
+              bottom: 25px;
+              font-size: 1.1em;
+            }
+
+            &:hover {
+              color: $secondary-color;
+            }
+          }
+        }
+      }
+
+      @include responsive(null,md) {
+        position: absolute;
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+
+    .menu-btn {
+      @include responsive(null, md) {
+        border: 1px solid;
+        padding: 5px 8px;
+        border-radius: 5px;
+      }
+
+      div {
+        position: absolute;
+        left: 100%;
+        top: 64%;
+        padding-right: 8px;
+        margin-top: -0.50em;
+        line-height: 1.2;
+        font-size: 18px;
+        font-weight: 200;
+        vertical-align: middle;
+        z-index: 99;
+      }
+
+      span {
+        width: 19px;
+        height: 3px;
+        margin: 4px 0;
+        background: rgb(0,0,0);
+        z-index: 99;
+        display: none;
+
+        @include responsive(null, md) {
+          display: block;
+        }
+      }
+    }
+
+    .mobile-nav {
+      align-items: center;
+      justify-content: flex-end;
+    }
+
+    .expand {
+      position: absolute;
+      width: 100%;
+      top: 145px;
+      left: 0;
+      z-index: 999;
+      background-color: #fff;
+      visibility: visible;
+      opacity: 1;
+      transition: all 0.5s ease;
+
+      ul {
+        display: block;
+        background-color: #fff;
+        z-index: 999;
       }
     }
   }
