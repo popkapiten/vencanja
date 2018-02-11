@@ -13,7 +13,7 @@ $(document).ready(function () {
         $('.navigation__navbar').toggleClass('expand')
     });
 
-    // SLIDER INIT
+    // CAROUSEL INIT
     $('.carousel__wrapper').bxSlider({
         minSlides: 5,
         maxSlides: 5,
@@ -24,4 +24,7 @@ $(document).ready(function () {
     });
 
     // SLIDER INIT
+    $('.slider__wrapper').bxSlider({
+        controls: false
+    });
 });
