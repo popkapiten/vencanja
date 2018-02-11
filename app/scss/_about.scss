@@ -1,0 +1,35 @@
+.about {
+  &__single {
+    display: flex;
+    margin-bottom: 40px;
+  }
+
+  &__icon {
+    height: 70px;
+    width: 10%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+
+    @include responsive(null, xs) {
+      width: 15%;
+    }
+  }
+
+  &__text {
+    margin-left: 25px;
+    width: 80%;
+
+    h3 {
+      margin-top: 0;
+      font-family: $default-font-family;
+
+      a {
+        &:hover {
+          color: $secondary-color;
+        }
+      }
+    }
+  }
+}

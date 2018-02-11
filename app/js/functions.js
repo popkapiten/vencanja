@@ -14,8 +14,14 @@ $(document).ready(function () {
     });
 
     // SLIDER INIT
-    $('.slider__wrapper').bxSlider({
-        responsive: true,
-        controls: false
+    $('.carousel__wrapper').bxSlider({
+        minSlides: 5,
+        maxSlides: 5,
+        slideMargin: 35,
+        moveSlides: 1,
+        slideWidth: 220,
+        pager: false
     });
+
+    // SLIDER INIT
 });

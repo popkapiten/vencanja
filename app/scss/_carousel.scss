@@ -1,0 +1,29 @@
+.carousel {
+  background-color: #f2f2f2;
+  padding: 60px 0;
+
+  &__wrapper {
+    img {
+      vertical-align: middle;
+      display: inline-block;
+      float: none !important;
+    }
+  }
+
+  .bx-wrapper {
+    background-color: #f2f2f2;
+
+    .bx-next, .bx-prev {
+      background-color: transparent;
+      color: $text-color;
+    }
+
+    .bx-next {
+      right: -10%;
+    }
+
+    .bx-prev {
+      left: -10%;
+    }
+  }
+}

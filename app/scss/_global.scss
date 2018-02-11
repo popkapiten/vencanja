@@ -17,11 +17,11 @@ body {
   font-size: $default-font-size;
   color: $text-color;
   margin: 0;
-  font-family: 'Open Sans', sans-serif;
+  font-family: $default-font-family;
 }
 
 h1,h2,h3,h4,h5,h6 {
-  font-family: 'Quintessential', sans-serif;
+  font-family: $title-font;
 }
 
 h1 {
@@ -94,5 +94,32 @@ body ul {
 
 .text-center {
   text-align: center;
+}
+
+.subtitle {
+  position: relative;
+  display: inline-block;
+  color: $secondary-color;
+  margin-top: 0;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -35px;
+    width: 20px;
+    height: 1px;
+    border-bottom: 1px solid #f49ac1;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -35px;
+    width: 20px;
+    height: 1px;
+    border-bottom: 1px solid #f49ac1;
+  }
 }
 

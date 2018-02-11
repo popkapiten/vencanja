@@ -1,0 +1,28 @@
+.mailing-list {
+  padding: 230px 0 40px 0;
+
+  h4 {
+    font-family: $default-font-family;
+  }
+
+  input {
+    display: block;
+    margin: 0 auto;
+    border: none;
+    background-color: #f2f2f2;
+    width: 550px;
+    padding: 10px 15px;
+    margin-bottom: 40px;
+    font-size: 1.2em;
+    font-family: $default-font-family;
+
+    @include responsive(null, sm) {
+      width: 100%;
+    }
+  }
+
+  .btn {
+    border: none;
+    cursor: pointer;
+  }
+}
