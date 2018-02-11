@@ -1,6 +1,8 @@
 /* global styling
 --------------------*/
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');
+@import url('https://fonts.googleapis.com/css?family=Quintessential');
+
 
 * {
   box-sizing: border-box;
@@ -18,12 +20,16 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Quintessential', sans-serif;
+}
+
 h1 {
-  font-size: 2em;
+  font-size: 4em;
 }
 
 h2 {
-  font-size: 1.8em;
+  font-size: 2em;
 }
 
 h3 {
@@ -49,5 +55,44 @@ body a {
 
 body ul {
   list-style: none;
+}
+
+.divider {
+  height: 20px;
+  background-color: $primary-color;
+}
+
+.btn {
+  padding: 10px 20px;
+  display: inline-block;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: 600;
+
+  &-primary {
+    background-color: $primary-color;
+  }
+
+  &-secondary {
+    background-color: $secondary-color;
+  }
+}
+
+.move-right {
+  float: right;
+}
+
+.move-left {
+  float: left;
+}
+
+.section-title {
+  span {
+    color: $secondary-color
+  }
+}
+
+.text-center {
+  text-align: center;
 }
 

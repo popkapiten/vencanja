@@ -1,0 +1,26 @@
+.vencanice {
+  &-single {
+    margin-bottom: 15px;
+
+    &.flowers {
+      .vencanice-single__image {
+        height: 280px;
+      }
+    }
+
+    &.featured {
+      .vencanice-single__image {
+        height: 580px;
+      }
+    }
+
+    &__image {
+      display: block;
+      height: 100px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      overflow: hidden;
+    }
+  }
+}

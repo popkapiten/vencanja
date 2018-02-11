@@ -1,0 +1,57 @@
+.restorani {
+  margin-bottom: 70px;
+
+  &__wrapper {
+
+    &.colored {
+      background-color: $primary-color;
+    }
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 45px;
+
+    .restorani-single {
+      width: 23.5%;
+      margin-right: 15px;
+
+      @include responsive(null, md) {
+        width: 49%;
+
+        &:nth-child(2n) {
+          margin-right: 0;
+        }
+      }
+
+      @include responsive(null, sm) {
+        margin: 0;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      .restorani-single__image {
+        display: block;
+        height: 190px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+
+      &.featured {
+        width: 320px;
+        margin: 0 10px;
+
+        .restorani-single__image {
+          height: 100px;
+        }
+
+        .restorani-single__title {
+          margin: 15px 0;
+        }
+      }
+    }
+  }
+}

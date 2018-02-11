@@ -1,0 +1,20 @@
+.muzika {
+  &-single {
+    margin-bottom: 15px;
+
+    &.featured {
+      .muzika-single__image {
+        height: 250px;
+      }
+    }
+
+    &__image {
+      display: block;
+      height: 100px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      overflow: hidden;
+    }
+  }
+}

@@ -1,0 +1,89 @@
+//BX SLIDER FIXES
+.bx-wrapper {
+  margin: 0;
+  border: none;
+  box-shadow: none;
+
+  .bx-default-pager {
+    bottom: 25px;
+
+    .bx-pager-item {
+      a {
+        width: 15px;
+        height: 15px;
+        background-color: transparent;
+        border: 1px solid #fff;
+        border-radius: 50%;
+
+        @include responsive(null, sm) {
+          width: 8px;
+          height: 8px;
+        }
+
+        &.active, &:hover {
+          background-color: #fff;
+        }
+      }
+    }
+  }
+}
+
+.slider {
+  &__wrapper {
+
+    &--item {
+      width: 100%;
+      height: 530px;
+      overflow: hidden;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: top center;
+
+      &--captions {
+        position: absolute;
+        color: #fff;
+        top: 40%;
+        left: 20%;
+        max-width: 600px;
+        max-height: 200px;
+        text-align: center;
+
+        @include responsive(null, sm) {
+          top: 10%;
+        }
+
+        h1 {
+          margin-bottom: 45px;
+          margin-top: 0;
+          text-shadow: 2px 2px #999;
+
+          @include responsive(null, sm) {
+            margin-bottom: 0;
+          }
+        }
+
+        p {
+          font-size: 1.5em;
+          text-transform: uppercase;
+          margin-bottom: 40px;
+          font-weight: 600;
+          text-shadow: 2px 2px #999;
+
+          @include responsive(null, sm) {
+            font-size: 1em;
+            margin-bottom: 10px;
+          }
+        }
+
+        .btn {
+          width: 140px;
+          height: 40px;
+        }
+      }
+
+      @include responsive(null, sm) {
+        height: 200px;
+      }
+    }
+  }
+}
