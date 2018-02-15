@@ -1,0 +1,30 @@
+.footer-menus {
+
+  h4 {
+    padding-left: 40px;
+  }
+
+  hr {
+    border: none;
+    border-top: 1px solid;
+    border-color: $secondary-color;
+  }
+
+  &__single {
+
+    > li {
+      margin-bottom: 5px;
+
+      > a {
+        &:hover {
+          color: $secondary-color;
+        }
+      }
+    }
+
+    i {
+      margin-right: 15px;
+      color: $secondary-color;
+    }
+  }
+}
