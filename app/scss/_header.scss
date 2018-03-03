@@ -64,6 +64,7 @@ header {
     &__right {
       @extend .top-bar__left;
       width: 500px;
+      align-items: center;
 
       span {
         margin: 0 10px;
@@ -338,6 +339,16 @@ header {
         background-color: #fff;
         z-index: 999;
       }
+    }
+  }
+
+  &.entry-header {
+    padding: 20px 0;
+    text-align: center;
+    color: #fff;
+
+    .entry-title {
+      margin: 0;
     }
   }
 }
