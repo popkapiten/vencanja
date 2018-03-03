@@ -1,6 +1,7 @@
 .carousel {
   background-color: #f2f2f2;
   padding: 60px 0;
+  box-shadow: 0 -3px 10px rgba($text-color, .1) inset;
 
   &__wrapper {
     img {
