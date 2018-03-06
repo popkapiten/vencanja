@@ -1,0 +1,47 @@
+.kalkulator {
+  &__title {
+    margin: 0;
+  }
+
+  &__input {
+    width: 100%;
+    height: 30px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+
+  &__paragraph {
+    font-size: 10px;
+    margin: 0;
+    padding: 15px 0 5px 2px;
+  }
+
+  &__hr {
+    border: 0;
+    border-top: 1px solid #ddd;
+    margin: 15px 0;
+  }
+
+  &__izracunaj {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &--count {
+      margin: 0;
+    }
+  }
+
+  &__ukupno {
+    border: 5px solid $primary-color;
+    background-color: #fff;
+    padding: 15px 25px;
+
+    &--stampaj {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}
+
