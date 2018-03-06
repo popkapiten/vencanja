@@ -27,4 +27,8 @@ $(document).ready(function () {
     $('.slider__wrapper').bxSlider({
         controls: false
     });
+
+    // ACCORDION
+    $( "#accordion" ).accordion();
+    $( "#accordion2" ).accordion();
 });

@@ -1,0 +1,50 @@
+.background {
+  background-color: $background-color;
+  padding: 25px;
+
+  &__naslov {
+    margin: 0;
+    &--sub {
+      margin-top: 15px;
+    }
+  }
+}
+
+.divider--small {
+  height: 4px;
+  background-color: $primary-color;
+}
+
+.ui-accordion {
+  padding: 10px;
+  width: 100%;
+  border: none;
+  transition: .4s;
+
+  .ui-accordion-header {
+    font-size: 15px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    border: none;
+    background-color: $background-color;
+    border-top: 1px solid #ddd;
+  }
+}
+.ui-icon {
+  display: none;
+}
+
+.ui-state-active {
+  color: $text-color;
+}
+
+.ui-accordion .ui-accordion-content {
+  border: none;
+  background-color: $background-color;
+  padding: 1em 1.2em;
+}
+.fa-plus-square {
+  cursor: pointer;
+  font-size: 18px;
+}

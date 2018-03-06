@@ -1,0 +1,88 @@
+.naslov {
+  background-color: $primary-color;
+  text-align: center;
+  border-radius: 10px;
+  padding: 15px 0;
+}
+
+.background {
+
+  &__title {
+    margin: 0;
+    padding-bottom: 15px;
+  }
+
+  &__details {
+    display: flex;
+    background-color: #fff;
+    padding: 15px;
+
+    &--img {
+      width: 160px;
+      height: 160px;
+      background-image: url("../images/firmaprofil.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      flex: 0 0 30%;
+    }
+
+    &--info {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+}
+
+.contact {
+
+  &__title {
+    margin: 0;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+}
+
+.paragraph {
+  display: inline-block;
+  margin: 0;
+}
+
+.izmeni-podatke {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0;
+}
+
+.marketing {
+  color: $secondary-color;
+  text-decoration: underline;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.link {
+  display: block;
+  color: $secondary-color;
+}
+
+.nalog {
+  padding-left: 20px;
+  &__naslov {
+    margin-bottom: 0;
+    &--hr {
+      width: 50%;
+      margin-left: 0;
+    }
+  }
+
+  &__lista {
+    padding: 0;
+    :not(last-child) {
+      padding-bottom: 5px;
+    }
+  }
+}

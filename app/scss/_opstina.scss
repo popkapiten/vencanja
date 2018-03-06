@@ -1,0 +1,30 @@
+.adresa {
+  display: flex;
+  padding: 0 20px;
+  border: 4px solid $primary-color;
+
+
+  &__opstina {
+    flex: 0 0 33.33%;
+    align-items: center;
+    display: flex;
+    font-size: 25px;
+
+  }
+
+  &__wrapper {
+    display: flex;
+    flex: 1;
+    color: $secondary-color;
+
+    &__lokacija {
+      padding: 20px;
+    }
+
+    &__kontakt {
+      flex-direction: column;
+      padding: 20px;
+      text-align: right;
+    }
+  }
+}

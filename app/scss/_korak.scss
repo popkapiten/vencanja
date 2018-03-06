@@ -1,0 +1,26 @@
+.korak {
+  padding: 15px;
+  display: flex;
+  border: 1px solid $background-color;
+}
+
+.korak-opis {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 15px;
+
+  &__naslov {
+    margin: 0;
+  }
+
+  &__text {
+    text-align: justify;
+  }
+}
+
+.btn-blue {
+  border: none;
+  background-color: $blue-color;
+  width: 110px;
+}
