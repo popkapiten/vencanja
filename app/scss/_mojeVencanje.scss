@@ -1,0 +1,57 @@
+.mojeVencanje {
+
+  &__podnaslov {
+    margin: 0;
+  }
+
+  &__text {
+    text-align: justify;
+    padding-bottom: 10px;
+  }
+
+  &__zakaciSlikuInput {
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 20px;
+
+    &--input {
+      width: 75%;
+      border: none;
+      height: 30px;
+      padding-left: 15px;
+
+    }
+
+    &--submit {
+      width: 25%;
+      border: none;
+      height: 30px;
+      cursor: pointer;
+      color: $text-color;
+    }
+
+    &--uputstvo {
+      text-align: center;
+      color: $text-color;
+    }
+  }
+
+  &__textarea {
+    width: 100%;
+    margin: 20px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+  }
+
+  &__kumovi {
+    width: 100%;
+    margin-top: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    height: 30px;
+    padding-left: 15px;
+  }
+}

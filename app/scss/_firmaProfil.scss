@@ -17,6 +17,11 @@
     background-color: #fff;
     padding: 15px;
 
+    @include responsive(null, md) {
+      flex-direction: column;
+      align-items: center;
+    }
+
     &--img {
       width: 160px;
       height: 160px;
@@ -47,12 +52,21 @@
 .paragraph {
   display: inline-block;
   margin: 0;
+
+  @include responsive(null, md) {
+    margin-bottom: 15px;
+  }
 }
 
 .izmeni-podatke {
   display: flex;
   justify-content: space-between;
   padding: 15px 0;
+
+  @include responsive(null, md) {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .marketing {
@@ -67,6 +81,13 @@
 .link {
   display: block;
   color: $secondary-color;
+}
+
+.blue {
+  @include responsive(null, md) {
+    text-align: center;
+    padding-top: 15px;
+  }
 }
 
 .nalog {
