@@ -51,6 +51,7 @@
 .paragraph {
   display: inline-block;
   margin: 0;
+  flex: 0 0 75%;
 
   @include responsive(null, md) {
     margin-bottom: 15px;
