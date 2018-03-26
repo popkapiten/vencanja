@@ -1,0 +1,41 @@
+.vasa-vencanja {
+
+  &__img {
+    margin-top: 15px;
+  }
+
+  &__p {
+    text-align: center;
+    font-weight: 400;
+  }
+
+}
+
+.divider--extrasmall {
+  height: 1px;
+  background-color: #ddd;
+  border: none;
+  margin-bottom: 5px;
+}
+
+.center {
+  text-align: center;
+}
+.pagination {
+  display: inline-block;
+}
+
+.pagination a {
+  color: black;
+  font-size: 15px;
+  float: left;
+  padding: 8px 10px;
+  text-decoration: none;
+  transition: background-color .3s;
+}
+
+.pagination a.active {
+  color: $secondary-color;
+}
+
+.pagination a:hover:not(.active) {background-color: $secondary-color;}

@@ -32,7 +32,7 @@ $(document).ready(function () {
     $( "#accordion" ).accordion();
     $( "#accordion2" ).accordion();
 
-    // calc
+    // KALKULATOR
     (function calc() {
         var ks = $( ".kalkulator" );
         var h3s = [];
@@ -51,26 +51,20 @@ $(document).ready(function () {
 
             a.on( "click", function(evt) {
                 evt.preventDefault();
-                console.log( $( this ).text() );
 
                 var sum = 0;
                 inputs.each(function() {
-                    console.log( 'val', $( this ).val(), parseFloat($( this ).val()) );
 
                     var x = parseFloat($( this ).val());
 
                     sum += isNaN(x) ? 0 : x;
                 });
 
-                console.log('rez', sum);
-
-                h3.text(parseFloat(Math.round(sum * 100) / 100).toFixed(2) + " $");
+                h3.text(parseFloat(Math.round(sum * 100) / 100).toFixed(2) + "€");
             });
-
-            console.log( index, 'a len', a.length );
         });
 
-        // ukupno
+        // UKUPNO
 
         var kis = $( "#ukupno" );
         console.log('kis len', kis.length);
@@ -90,12 +84,12 @@ $(document).ready(function () {
                 h3s.forEach(function (h3) {
                     sum += parseFloat(h3.text());
                 });
-                h3.text(parseFloat(Math.round(sum * 100) / 100).toFixed(2) + " $");
+                h3.text(parseFloat(Math.round(sum * 100) / 100).toFixed(2) + "€");
             });
         });
 
-        console.log('bk len', ks.length);
     })();
+
+
 });
 
-console.log('hello');
