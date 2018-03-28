@@ -1,0 +1,19 @@
+.mojagalerija {
+
+  margin-bottom: 20px;
+
+  &__icons {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 12px;
+    font-size: 15px;
+  }
+
+  &__img {
+    padding: 10px 0;
+  }
+
+  &__p {
+    font-weight: 600;
+  }
+}

@@ -1,0 +1,138 @@
+.naslov {
+  background-color: $primary-color;
+  text-align: center;
+  border-radius: 10px;
+  padding: 15px 0;
+}
+
+.background {
+
+  &__title {
+    margin: 0;
+    padding-bottom: 15px;
+  }
+
+  &__details {
+    display: flex;
+    background-color: #fff;
+    padding: 15px;
+
+    @include responsive(null, md) {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &--img {
+      width: 160px;
+      height: 160px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      flex: 0 0 30%;
+    }
+
+    &--info {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+}
+
+.contact {
+
+  &__title {
+    margin: 0;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  &__input {
+    width: 100%;
+    margin-bottom: 10px;
+    text-align: left;
+    padding-left: 10px;
+    height: 25px;
+    border-radius: 5px;
+    border: 2px solid $secondary-color;
+
+    &--web {
+      margin-bottom: 5px;
+      text-align: left;
+      padding-left: 10px;
+      height: 25px;
+      border-radius: 5px;
+      border: 2px solid $secondary-color;
+    }
+
+    &--tel {
+      width: 80%;
+      margin-bottom: 5px;
+      text-align: left;
+      padding-left: 10px;
+      height: 25px;
+      border-radius: 5px;
+      border: 2px solid $secondary-color;
+    }
+  }
+}
+
+.paragraph {
+  display: inline-block;
+  margin: 0;
+  flex: 0 0 75%;
+
+  @include responsive(null, md) {
+    margin-bottom: 15px;
+  }
+}
+
+.izmeni-podatke {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0;
+
+  @include responsive(null, md) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.marketing {
+  color: $secondary-color;
+  text-decoration: underline;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.link {
+  display: block;
+  color: $secondary-color;
+}
+
+.blue {
+  @include responsive(null, md) {
+    text-align: center;
+    padding-top: 15px;
+  }
+}
+
+.nalog {
+  padding-left: 20px;
+  &__naslov {
+    margin-bottom: 0;
+    &--hr {
+      width: 50%;
+      margin-left: 0;
+    }
+  }
+
+  &__lista {
+    padding: 0;
+    :not(last-child) {
+      padding-bottom: 5px;
+    }
+  }
+}
