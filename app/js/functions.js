@@ -52,13 +52,33 @@ $(document).ready(function () {
             a.on( "click", function(evt) {
                 evt.preventDefault();
 
-                var sum = 0;
-                inputs.each(function() {
+                var sum = 0,
+                    broj_gostiju = 0;
 
-                    var x = parseFloat($( this ).val());
+                if (evt.currentTarget.id === 'a_restoran') {
+                    inputs.each(function() {
 
-                    sum += isNaN(x) ? 0 : x;
-                });
+                        var $this = $(this);
+                        var x = parseFloat($this.val());
+
+                        if ($this[0].id === 'broj_gostiju' && !isNaN(x)) {
+                            broj_gostiju = x;
+                        } else if ($this[0].id === 'cena_menija' && !isNaN(x)) {
+                            x = x * broj_gostiju;
+                            sum += x;
+                        } else {
+                            sum += isNaN(x) ? 0 : x;
+                        }
+
+                    });
+                } else {
+                    inputs.each(function() {
+
+                        var x = parseFloat($( this ).val());
+
+                        sum += isNaN(x) ? 0 : x;
+                    });
+                }
 
                 h3.text(parseFloat(Math.round(sum * 100) / 100).toFixed(2) + "€");
             });
