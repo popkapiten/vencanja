@@ -1,6 +1,15 @@
 .mojagalerija {
 
 
+  @include responsive(null, md) {
+    display: flex;
+  }
+
+  @include responsive(null, md) {
+    flex-direction: column;
+    text-align: center;
+  }
+
   &__wrapper {
     display: flex;
     justify-content: center;
@@ -56,7 +65,7 @@
     }
     @include responsive(null, md) {
 
-      width: 80%;
+      width: 70%;
       &:nth-child(2n) {
         margin-right: 0;
       }

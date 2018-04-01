@@ -1,5 +1,14 @@
 .vasa-vencanja {
 
+  @include responsive(null, md) {
+    display: flex;
+  }
+
+  @include responsive(null, sm) {
+    flex-direction: column;
+    text-align: center;
+  }
+
   &__img {
     margin-top: 15px;
   }
