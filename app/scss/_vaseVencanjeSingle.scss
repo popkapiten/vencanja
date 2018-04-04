@@ -1,0 +1,271 @@
+.vencanjeSingle {
+
+  @include responsive(null, sm) {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  margin: 25px 0;
+  display: flex;
+  justify-content: space-around;
+
+  &__img {
+    padding: 15px;
+    border: 1px solid #ddd;
+  }
+
+  &__name {
+    text-align: center;
+    margin: 0;
+  }
+
+  &__sub {
+    margin: 0;
+    text-align: center;
+    color: $secondary-color;
+
+    &--text {
+      text-align: justify;
+    }
+  }
+
+  &__background {
+    background-color: #ddd;
+    padding: 30px 0;
+    box-shadow: 0 8px 6px 0 rgba(0, 0, 0, .4);
+  }
+
+}
+
+
+
+.kumovi {
+
+  margin: 25px 0;
+
+  @include responsive(null, sm) {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  display: flex;
+  justify-content: space-around;
+
+  &__title {
+    text-align: center;
+    color: $secondary-color;
+    padding: 25px 0;
+  }
+
+  &__img {
+    border: 2px solid #ddd;
+  }
+
+  &__sub {
+    text-align: center;
+    margin: 0;
+    padding-top: 10px;
+  }
+
+  &__hr {
+    border: 0;
+    border-bottom: 1px solid #ddd;
+    width: 20%;
+  }
+
+  &__name {
+    text-align: center;
+    margin: 10px 0;
+  }
+}
+
+.raspored {
+
+  @include responsive(null, md) {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  @include responsive(null, sm) {
+    flex-direction: column;
+    display: flex;
+    max-width: 360px;
+  }
+
+  &__background {
+    background-color: #eee;
+    padding: 40px 0;
+  }
+
+  &__centar {
+    text-align: center;
+
+    @include responsive(null, md) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    margin: 0;
+    padding-bottom: 30px;
+  }
+
+  &__wrapper {
+    border: 5px solid $primary-color;
+    text-align: center;
+    padding: 15px 10px;
+    margin-top: -4px;
+
+    @include responsive(null, md) {
+      margin: 0;
+    }
+  }
+
+  &__sub {
+    margin: 0;
+    letter-spacing: 4px;
+  }
+
+  &__p {
+    margin: 0;
+    font-weight: 600;
+  }
+}
+
+.mapa {height: 250px}
+
+.galerijaSingle {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  text-align: center;
+
+  @include responsive(null, lg) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  &__img {
+    @include responsive(null, lg) {
+      padding: 15px;
+    }
+  }
+
+  &__btn {
+    text-align: center;
+    margin: 25px 0;
+  }
+}
+
+.forma {
+  border-right: 1px solid #e7e7e7;
+  margin-bottom: 20px;
+
+  &__sub {
+    margin: 0;
+    padding-bottom: 20px;
+  }
+
+  &__input {
+    width: 85%;
+    height: 30px;
+    padding: 10px 15px;
+    border: 1px solid #e7e7e7;
+    border-radius: 5px;
+    margin: 10px 0;
+  }
+
+  &__btn {
+    margin-bottom: 25px;
+  }
+}
+
+.textarea {
+  height: 100px;
+}
+
+.present {
+
+  &__sub {
+    padding-bottom: 20px;
+    padding-left: 25px;
+    margin: 0;
+  }
+  &__store {
+    border: 5px solid $primary-color;
+    text-align: center;
+    padding: 20px;
+    font-size: 15px;
+    font-weight: 600;
+    }
+
+  &__store:hover {
+    background-color: #e7e7e7;
+    cursor: pointer;
+    }
+  }
+
+.share {
+  display: flex;
+  align-items: center;
+
+  &__p {
+    margin: 0;
+    padding: 10px 0;
+  }
+
+  &__icon {
+    padding-left: 15px;
+    font-size: 20px;
+  }
+}
+
+.commentsSingle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__p {
+    margin: 10px 0;
+  }
+}
+
+.comment-respond {
+  display: flex;
+
+  &__img {
+    padding: 20px;
+  }
+
+  &__wrapper {
+    max-width: 50%;
+    padding: 20px 0;
+  }
+  &__name {
+    margin: 0;
+  }
+  &__date {
+    margin: 0;
+  }
+}
+
+.leaveComment {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.face {
+  color: #305991;
+}
+.twitter {
+  color: #2ea8d1;
+}
+.fa_plus {
+  color: #f76a4e;
+}
