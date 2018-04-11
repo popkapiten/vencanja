@@ -14,8 +14,11 @@
   }
 
   &__p {
-    text-align: center;
-    font-weight: 400;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    font-weight: 600;
+    font-size: 15px;
   }
 
 }
